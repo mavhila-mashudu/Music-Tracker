@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="background-orb orb-one"></div>
+        <div class="background-orb orb-two"></div>
+        <main class="app-card">
+            <header class="hero">
+                <p class="eyebrow">Smart music organization</p>
+                <h1>Music Tracker</h1>
+                <p class="hero-copy">
+                    Explore your track collection by year, filter it with precision, and save new favorites right in the browser.
+                </p>
+            </header>
+
+            <section class="panel" aria-labelledby="filter-heading">
+                <header class="section-heading">
+                    <h2 id="filter-heading">Filter Controls</h2>
+                    <p>Search by year range or artist name using an exact case-insensitive match.</p>
+                </header>
+
+                <form id="filter-form" class="filter-form">
+                    <fieldset class="control-group">
+                        <legend class="sr-only">Track filter controls</legend>
+
+                        <div class="filter-grid">
+                            <label class="field" for="min-year">
+                                <span>Min Year</span>
+                                <input id="min-year" type="number" placeholder="e.g. 2010">
+                            </label>
+
+                            <label class="field" for="max-year">
+                                <span>Max Year</span>
+                                <input id="max-year" type="number" placeholder="e.g. 2024">
+                            </label>
+
+                            <label class="field field-wide" for="artist-filter">
+                                <span>Artist</span>
+                                <input id="artist-filter" type="text" placeholder="Exact artist match">
+                            </label>
+                        </div>
+
+                        <div class="actions-row">
+                            <button id="filter-btn" class="button button-primary" type="button">Filter Tracks</button>
+                            <button id="group-btn" class="button button-secondary" type="button">Group by Year</button>
+                            <button id="reset-btn" class="button button-ghost" type="button">Show All</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="panel" aria-labelledby="add-track-heading">
+                <header class="section-heading">
+                    <h2 id="add-track-heading">Add a Track</h2>
+                    <p>Your tracks will stay available after refresh.</p>
+                </header>
+
+                <form id="add-track-form" class="add-form">
+                    <fieldset class="control-group">
+                        <legend class="sr-only">Add a new music track</legend>
+
+                        <label class="field" for="track-title">
+                            <span>Title</span>
+                            <input id="track-title" type="text" placeholder="Song title" required>
+                        </label>
+
+                        <label class="field" for="track-artist">
+                            <span>Artist</span>
+                            <input id="track-artist" type="text" placeholder="Artist name" required>
+                        </label>
+
+                        <label class="field" for="track-year">
+                            <span>Year</span>
+                            <input id="track-year" type="number" placeholder="Release year" required>
+                        </label>
+
+                        <button class="button button-primary add-button" type="submit">Add Track</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="panel results-panel" aria-labelledby="results-heading">
+                <div class="results-topbar">
+                    <header class="section-heading">
+                        <h2 id="results-heading">Results</h2>
+                        <output id="result-summary" class="result-summary" aria-live="polite">Showing all tracks.</output>
+                    </header>
+                    <span id="view-badge" class="view-badge">All Tracks</span>
+                </div>
+
+                <div id="results" class="results-grid" aria-live="polite"></div>
+            </section>
+
+            <footer>
+                <p>&copy; 2026 2827911 | Made by Mavhila Mashudu</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="node.js"></script>
+</body>
+</html>
