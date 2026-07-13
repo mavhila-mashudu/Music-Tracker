@@ -17,4 +17,4 @@ All songs are stored in **local storage**, so they persist even after refreshing
 - **Filtering:**  
   - Filter by artist  
   - Filter by minimum or maximum year  
-- **Grouping:** Group songs by year for easier browsing.  
+- **Grouping:** Group songs by year.  
